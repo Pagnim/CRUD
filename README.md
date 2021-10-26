@@ -6,12 +6,11 @@
 >- #### 회원가입
     - method : **Post**
     - http://127.0.0.1:8000/users/signup
-    -   
 ```
 body : {
         "name":"name",
         "password":"password"
-}
+       }
 ```
     - success response : {"message": "CREATED!"}
     - 프론트가 body 값에 name과 password를 보내주면 User테이블에 데이터를 생성합니다.
@@ -27,7 +26,7 @@ body : {
 body : {
         "name" : "가입된 name",
         "password":"가입된 password"
-}
+       }
 ```
     - success response : {"access_token" : access_token}
     - 프론트가 body 값에 name과 password를 보내주면
@@ -44,7 +43,7 @@ body : {
 body : {
         "title" : "제목",
         "content" : "내용"
-}
+       }
 ```
     - success response : {"message":"CREATED!"}
     - 프론트가 body 값에 title과 content를 보내주면 Post테이블에 title, content를 생성합니다.
@@ -70,13 +69,13 @@ body : {
             "user_id": 1
         }
         }
-        ]
+    ]
 }
 ```
     - http://127.0.0.1:8000/posts/read/<int:posts_id>
     - success response : 
 ```
-    {
+{
     "data": {
         "post_id": 1,
         "user": "pang",
@@ -97,7 +96,7 @@ body : {
 body : {
             "title":"수정!",
             "content":"수정 내용"
-        }
+       }
 ```
     - success response : {"message": "UPDATED!"}
     - 프론트가 put요청으로 body값에 title과 content를 값을 보내면 게시글이 수정되도록 하였습니다.
