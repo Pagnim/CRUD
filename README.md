@@ -1,3 +1,9 @@
+```
+body : {
+        "name":"name",
+        "password":"password"
+}
+```
 ## [위코드 x 원티드] 백엔드 프리온보딩 선발 과제
 >### 글 작성, 글 확인, 글 목록 확인, 글 수정, 글 삭제 기능
 - #### ♢SECRET_KEY와 ALGORITHM은 깃 허브에 업로드 하기 위해 .gitignore에 따로 저장해두었습니다.
