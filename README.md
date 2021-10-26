@@ -1,16 +1,17 @@
 ## [위코드 x 원티드] 백엔드 프리온보딩 선발 과제
 >### 글 작성, 글 확인, 글 목록 확인, 글 수정, 글 삭제 기능
-- #### ♢SECRET_KEY와 ALGORITHM은 깃 허브에 업로드 하기 위해 .gitignore파일에 따로 저장해두었습니다.
+- #### ♢SECRET_KEY와 ALGORITHM은 깃 허브에 업로드 하기 위해 .gitignore에 따로 저장해두었습니다.
 
 >- #### 회원가입
     - method : **Post**
     - http://127.0.0.1:8000/users/signup
-    -   ```
-        body : {
-                "name":"name",
-                "password":"password"
-        }
-        ```
+    -   
+```
+body : {
+        "name":"name",
+        "password":"password"
+}
+```
     - success response : {"message": "CREATED!"}
     - 프론트가 body 값에 name과 password를 보내주면 User테이블에 데이터를 생성합니다.
     - password는 bcrypt와 salt를 이용해 좀 더 복잡하게 암호와하여 데이터 베이스에 저장하였습니다.
@@ -51,7 +52,7 @@
 >- #### 글 목록 보기
     - method : **get**
     - http://127.0.0.1:8000/posts/read/0?page=1 (전체 글 보기)
-     success response : ```
+    - success response : ```
                 {
                 "data": {
                     "count": 13,
@@ -71,7 +72,7 @@
                 }
                 ```
     - http://127.0.0.1:8000/posts/read/<int:posts_id>
-     success response : ```
+    - success response : ```
                 {
                 "data": {
                     "post_id": 1,
@@ -89,7 +90,7 @@
 >- #### 글 수정
     - method : **put**
     - http://127.0.0.1:8000/posts/read/<int:posts_id>
-       ```
+    -   ```
         body : {
                     "title":"수정!",
                     "content":"수정 내용"
