@@ -51,7 +51,7 @@
 >- #### 글 목록 보기
     - method : **get**
     - http://127.0.0.1:8000/posts/read/0?page=1 (전체 글 보기)
-    - success response : ```
+     success response : ```
                 {
                 "data": {
                     "count": 13,
@@ -71,7 +71,7 @@
                 }
                 ```
     - http://127.0.0.1:8000/posts/read/<int:posts_id>
-    - success response : ```
+     success response : ```
                 {
                 "data": {
                     "post_id": 1,
@@ -89,7 +89,7 @@
 >- #### 글 수정
     - method : **put**
     - http://127.0.0.1:8000/posts/read/<int:posts_id>
-    -   ```
+       ```
         body : {
                     "title":"수정!",
                     "content":"수정 내용"
