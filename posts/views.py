@@ -9,6 +9,14 @@ from users.models          import User
 
 from utils                 import login_decorator
 
+class tests(View):
+    def get(self,request):
+        test1 = User.objects.all()
+        test2 = test1.filter(id=1)
+        print(test2)
+        
+        
+        return JsonResponse({"message":"CREATED!"}, status=201)
 class PostView(View):
     @login_decorator
     def post(self, request):
